@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -34,27 +35,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iPr-5h-FWm">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iPr-5h-FWm">
+                                <frame key="frameInset" minX="1" minY="217" width="375" height="458"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Y9k-YO-gMo">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Y9k-YO-gMo">
                                 <frame key="frameInset" minX="152" minY="13" width="73" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sports" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOx-Kq-LuK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sports Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOx-Kq-LuK">
+                                <frame key="frameInset" minX="151" minY="165" width="73" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="BADIN_LOGO_CROSS_OL_26" translatesAutoresizingMaskIntoConstraints="NO" id="lM6-P9-Gd3">
+                                <frame key="frameInset" minX="103" minY="67" width="172" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="l8q-1u-osl"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="iPr-5h-FWm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0nr-Zg-sOr"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iPr-5h-FWm" secondAttribute="bottom" id="IbJ-p1-Ka0"/>
-                            <constraint firstAttribute="trailing" secondItem="iPr-5h-FWm" secondAttribute="trailing" id="Jcb-Ig-9Pl"/>
-                            <constraint firstItem="MOx-Kq-LuK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="KTL-B6-6jI"/>
-                            <constraint firstItem="MOx-Kq-LuK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tra-aL-6cA"/>
-                            <constraint firstItem="iPr-5h-FWm" firstAttribute="top" secondItem="MOx-Kq-LuK" secondAttribute="bottom" id="vis-Wc-JH3"/>
+                            <constraint firstItem="iPr-5h-FWm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-15" id="9C6-7U-j5Z"/>
+                            <constraint firstItem="lM6-P9-Gd3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="9lw-fm-c5S"/>
+                            <constraint firstItem="MOx-Kq-LuK" firstAttribute="top" secondItem="lM6-P9-Gd3" secondAttribute="bottom" constant="8" symbolic="YES" id="ARC-nq-abT"/>
+                            <constraint firstItem="lM6-P9-Gd3" firstAttribute="centerX" secondItem="iPr-5h-FWm" secondAttribute="centerX" id="LKH-Bb-XrI"/>
+                            <constraint firstItem="iPr-5h-FWm" firstAttribute="centerX" secondItem="Y9k-YO-gMo" secondAttribute="centerX" id="Mod-sd-fPU"/>
+                            <constraint firstItem="MOx-Kq-LuK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N3Q-Tf-W4j"/>
+                            <constraint firstItem="lM6-P9-Gd3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="87" id="Zth-vp-a5d"/>
+                            <constraint firstItem="Y9k-YO-gMo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="13" id="c0Z-VG-E7W"/>
+                            <constraint firstItem="y3c-jy-aDJ" firstAttribute="top" secondItem="Y9k-YO-gMo" secondAttribute="bottom" constant="21" id="gNe-vG-Opp"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="iPr-5h-FWm" secondAttribute="bottom" constant="-8" id="iXs-TR-IfJ"/>
+                            <constraint firstItem="iPr-5h-FWm" firstAttribute="top" secondItem="MOx-Kq-LuK" secondAttribute="bottom" constant="22" id="klg-eH-HY0"/>
+                            <constraint firstItem="lM6-P9-Gd3" firstAttribute="centerX" secondItem="Y9k-YO-gMo" secondAttribute="centerX" id="sjL-fk-3mS"/>
+                            <constraint firstItem="lM6-P9-Gd3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t1D-RY-0aV"/>
+                            <constraint firstItem="Y9k-YO-gMo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="152" id="uFB-Uq-nAi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3ZJ-2v-Cg1"/>
@@ -154,4 +170,7 @@
             <point key="canvasLocation" x="506" y="104"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BADIN_LOGO_CROSS_OL_26" width="811" height="1108"/>
+    </resources>
 </document>
