@@ -8,6 +8,8 @@
 
 import UIKit
 
+var tapCount=0
+
 class ViewController:
     UIViewController ,
     UITableViewDataSource ,
@@ -16,6 +18,21 @@ class ViewController:
 
     
     @IBOutlet weak var sportsTableView: UITableView!
+    
+    
+
+    
+    //conditional to change the color of button when clicked.
+    @IBAction func RecentEvents(_ sender: UIButton) {
+        tapCount=tapCount+1
+        if tapCount == 1 {
+            (self.view.backgroundColor=UIColor.green)
+        }
+        print(tapCount)
+    }
+    
+
+    
     
     
     
@@ -31,8 +48,14 @@ class ViewController:
 
         
     }
-
+    //method, will be added to a text field when we lwarn to connect it from another view controler.
+    func sportEvents  (sport1:String,sport2:Int,sport3:String,sport4:String,sport5:String,sport6:String,sport7:String) -> String {
+        return "The winner of the football game is \(sport1) . Badin placed \(sport2)st at the cross country meet. The winner of the girl's soccer game is \(sport3). The winner of the boy's soccer game is  \(sport4). The winner of the volleyball game is \(sport5). The winner of the girl's golf match is \(sport6). The winner of the boy's golf match is \(sport7)."
+        
+    }
     
+
+    //array
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sports.count
         
@@ -50,6 +73,8 @@ class ViewController:
         performSegue(withIdentifier: "moveSegue", sender: "Fall")
     }
 
+    
+    
     
     
     
