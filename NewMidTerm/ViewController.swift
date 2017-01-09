@@ -22,7 +22,7 @@ class ViewController:
     
 
     
-    //conditional to change the color of button when clicked.
+    //conditional to change the color of button when clicked. Once I know how to change button color with conditional, I will replace the background color with it.
     @IBAction func RecentEvents(_ sender: UIButton) {
         tapCount=tapCount+1
         if tapCount == 1 {
